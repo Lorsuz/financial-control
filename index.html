@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Financial Control</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+	</head>
+
+	<body>
+		<main class="container mt-5 mb-5 col-md-9 col-lg-12 mx-auto">
+			<h1 class="display-1 text-center">Financial Control</h1>
+			<section class="mt-5 mb-5 row gap-3 d-flex justify-content-center">
+				<div class="border border-success p-2 p-md-3 col-sm-3">
+					<h2 class="text-center ">Income</h2>
+					<p class="text-center text-success fs-3" id="income">R$ 0.00</p>
+				</div>
+				<div class="border border-danger p-2 p-md-3 col-sm-3">
+					<h2 class="text-center">Expense</h2>
+					<p class="text-center text-danger fs-3" id="expense">R$ 0.00</p>
+				</div>
+				<div class="border border-black p-2 p-md-3 col-sm-3">
+					<h2 class="text-center">Balance</h2>
+					<p class="text-center fs-3" id="balance">R$ 0.00</p>
+				</div>
+			</section>
+			<section class="mb-5">
+				<form class="row">
+					<div class="col-md-8">
+						<div class="mb-3">
+							<label class="form-label" for="description">Description:</label>
+							<input type="text" name="description" id="description" class="form-control text-capitalize">
+						</div>
+						<div class="mb-3">
+							<label class="form-label" for="value">Value:</label>
+							<input type="number" name="value" id="value" class="form-control" placeholder="0.00">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<label class="form-label" for="">Select the control type:</label>
+						<div>
+							<input checked class="form-check-input me-2" type="radio" name="type" id="income" value="income">
+							<label class="form-label" for="income">Income</label>
+						</div>
+						<div>
+							<input class="form-check-input me-2" type="radio" name="type" id="expense" value="expense">
+							<label class="form-label" for="expense">Expense</label>
+						</div>
+						<div class="mt-3">
+							<button id="button" class="btn btn-primary w-100">Add control</button>
+						</div>
+					</div>
+				</form>
+			</section>
+			<section class="table-responsive">
+				<table class="table table-hover table-hover table-borderless">
+					<thead>
+						<tr>
+							<th class="text-center">ID</th>
+							<th class="text-center">Description</th>
+							<th class="text-center">Value</th>
+							<th class="text-center">Type</th>
+						</tr>
+					</thead>
+					<tbody class=""></tbody>
+				</table>
+			</section>
+		</main>
+
+		<script type="module" src="ControlFinance.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+			integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+			crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+			integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+			crossorigin="anonymous"></script>
+
+	</body>
+
+</html>
